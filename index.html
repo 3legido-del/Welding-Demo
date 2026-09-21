@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Herrería & Portones Automáticos | Cotización Inmediata</title>
+  <style>
+    :root {
+      --bg: #0f1115;
+      --card-bg: #1a1d24;
+      --text: #ffffff;
+      --text-muted: #9aa0a6;
+      --accent: #f59e0b;
+      --whatsapp: #22c55e;
+      --call: #2563eb;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      padding-bottom: 90px;
+    }
+    .header {
+      padding: 24px 16px 16px;
+      text-align: center;
+      background: linear-gradient(180deg, #181c24 0%, var(--bg) 100%);
+      border-bottom: 1px solid #272c38;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 6px;
+    }
+    .subtext {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 14px;
+      font-size: 12px;
+      color: #cbd5e1;
+    }
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .container {
+      padding: 16px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 18px 0 12px;
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #262b36;
+    }
+    .card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      display: block;
+    }
+    .card-label {
+      padding: 8px 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #f1f5f9;
+    }
+    .reviews-box {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 20px;
+      border: 1px solid #262b36;
+    }
+    .review-stars {
+      color: var(--accent);
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    .review-quote {
+      font-size: 13px;
+      line-height: 1.4;
+      color: #cbd5e1;
+      font-style: italic;
+    }
+    .review-author {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 6px;
+      font-weight: 600;
+    }
+    .fixed-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(15, 17, 21, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+      display: flex;
+      gap: 10px;
+      border-top: 1px solid #262b36;
+      z-index: 100;
+    }
+    .btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      color: #ffffff;
+      text-align: center;
+    }
+    .btn-call {
+      background-color: var(--call);
+    }
+    .btn-whatsapp {
+      background-color: var(--whatsapp);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="badge">Taller Especializado</div>
+    <h1>Herrería & Portones Morales</h1>
+    <p class="subtext">Fabricación e instalación a la medida en Santa Ana, CA</p>
+    
+    <div class="stats">
+      <div class="stat-item">⭐ 5.0 (Google)</div>
+      <div class="stat-item">🛡️ Garantía por Escrito</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="section-title">Portones Automáticos y Corredizos</div>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=400&q=80" alt="Portón Moderno">
+        <div class="card-label">Portón Residencial</div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&w=400&q=80" alt="Motor y Corredizo">
+        <div class="card-label">Sistema Corredizo</div>
+      </div>
+    </div>
+
+    <div class="section-title">Rejas de Seguridad y Cercas</div>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=400&q=80" alt="Puerta de Seguridad">
+        <div class="card-label">Puertas de Entrada</div>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1509644851169-2acc08aa25b5?auto=format&fit=crop&w=400&q=80" alt="Barandales">
+        <div class="card-label">Pasamanos & Barandal</div>
+      </div>
+    </div>
+
+    <div class="reviews-box">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-quote">"Don Morales me fabricó e instaló un portón corredizo automático para mi casa. Trabajo muy limpio, entregado a tiempo y a precio justo."</p>
+      <p class="review-author">— Carlos R. (Santa Ana, CA)</p>
+    </div>
+  </main>
+
+  <div class="fixed-bar">
+    <a href="tel:+17145550199" class="btn btn-call">
+      📞 Llamar Ahora
+    </a>
+    <a href="https://wa.me/17145550199?text=Hola,%20me%20interesa%20una%20cotizacion%20para%20un%20porton%20o%20reja.%20Aqui%20le%20mando%20fotos%20y%20medidas:" class="btn btn-whatsapp">
+      💬 Cotizar WhatsApp
+    </a>
+  </div>
+
+</body>
+</html>
