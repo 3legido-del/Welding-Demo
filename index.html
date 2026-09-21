@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>The Weld Shop | Custom Fabrication & Gates | Garden Grove, CA</title>
+  <title>The Weld Shop | Custom Metal Fabrication & Gates | Garden Grove, CA</title>
   <style>
     :root {
-      --bg: #0f1115;
-      --card-bg: #1a1d24;
+      --bg: #121316;
+      --surface: #1c1e24;
+      --border: #2e323b;
       --text: #ffffff;
-      --text-muted: #9aa0a6;
+      --text-dim: #9ca3af;
       --accent: #f59e0b;
-      --whatsapp: #22c55e;
+      --whatsapp: #25d366;
       --call: #2563eb;
     }
     * {
@@ -24,198 +25,252 @@
     body {
       background-color: var(--bg);
       color: var(--text);
-      padding-bottom: 90px;
+      padding-bottom: 95px;
     }
-    .header {
-      padding: 24px 16px 16px;
+    .header-banner {
+      background: #181a20;
+      border-bottom: 1px solid var(--border);
+      padding: 24px 16px;
       text-align: center;
-      background: linear-gradient(180deg, #181c24 0%, var(--bg) 100%);
-      border-bottom: 1px solid #272c38;
     }
-    .badge {
-      display: inline-block;
-      background: rgba(245, 158, 11, 0.15);
-      color: var(--accent);
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(37, 211, 102, 0.12);
+      border: 1px solid rgba(37, 211, 102, 0.3);
+      color: var(--whatsapp);
+      padding: 4px 12px;
+      border-radius: 20px;
       font-size: 11px;
       font-weight: 700;
+      letter-spacing: 0.5px;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      padding: 4px 10px;
-      border-radius: 20px;
       margin-bottom: 10px;
     }
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--whatsapp);
+      border-radius: 50%;
+    }
     h1 {
-      font-size: 24px;
-      font-weight: 800;
-      line-height: 1.2;
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+      line-height: 1.1;
       margin-bottom: 6px;
     }
-    .subtext {
-      color: var(--text-muted);
-      font-size: 14px;
+    .location-sub {
+      color: var(--text-dim);
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 14px;
     }
-    .stats {
+    .quick-meta {
       display: flex;
       justify-content: center;
-      gap: 16px;
-      margin-top: 14px;
+      gap: 12px;
       font-size: 12px;
-      color: #cbd5e1;
+      font-weight: 600;
+      color: #e5e7eb;
     }
-    .stat-item {
-      display: flex;
-      align-items: center;
-      gap: 4px;
+    .meta-tag {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 6px 12px;
+      border-radius: 6px;
     }
-    .container {
-      padding: 16px;
-      max-width: 600px;
+    .main-wrap {
+      max-width: 540px;
       margin: 0 auto;
+      padding: 16px;
     }
-    .section-title {
-      font-size: 15px;
-      font-weight: 700;
+    .headline-bar {
+      font-size: 13px;
+      font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin: 18px 0 12px;
-      color: #e2e8f0;
+      letter-spacing: 1px;
+      color: var(--accent);
+      margin: 20px 0 10px;
       display: flex;
       align-items: center;
       gap: 8px;
     }
-    .grid {
+    .headline-bar::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .project-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
     }
-    .card {
-      background: var(--card-bg);
-      border-radius: 10px;
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
       overflow: hidden;
-      border: 1px solid #262b36;
+      display: flex;
+      flex-direction: column;
     }
-    .card img {
+    .project-card img {
       width: 100%;
       height: 140px;
       object-fit: cover;
       display: block;
+      background: #000;
     }
-    .card-label {
-      padding: 8px 10px;
+    .card-footer {
+      padding: 10px;
+      background: var(--surface);
+    }
+    .card-footer h3 {
       font-size: 13px;
-      font-weight: 600;
-      color: #f1f5f9;
+      font-weight: 700;
+      color: #f3f4f6;
+      margin-bottom: 2px;
     }
-    .reviews-box {
-      background: var(--card-bg);
-      border-radius: 12px;
-      padding: 16px;
-      margin-top: 20px;
-      border: 1px solid #262b36;
+    .card-footer p {
+      font-size: 11px;
+      color: var(--text-dim);
     }
-    .review-stars {
-      color: var(--accent);
-      font-size: 14px;
+    .spec-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      padding: 14px;
+      margin-top: 18px;
+    }
+    .spec-title {
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #fff;
       margin-bottom: 6px;
     }
-    .review-quote {
-      font-size: 13px;
-      line-height: 1.4;
-      color: #cbd5e1;
-      font-style: italic;
-    }
-    .review-author {
+    .spec-list {
+      list-style: none;
       font-size: 12px;
-      color: var(--text-muted);
-      margin-top: 6px;
-      font-weight: 600;
+      color: var(--text-dim);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
     }
-    .fixed-bar {
+    .spec-list li::before {
+      content: "✓ ";
+      color: var(--accent);
+      font-weight: bold;
+    }
+    .action-dock {
       position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
-      background: rgba(15, 17, 21, 0.95);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      background: #181a20;
+      border-top: 1px solid var(--border);
       padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
       display: flex;
       gap: 10px;
-      border-top: 1px solid #262b36;
-      z-index: 100;
+      z-index: 1000;
     }
-    .btn {
+    .dock-btn {
       flex: 1;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 14px 12px;
+      padding: 14px 10px;
       border-radius: 8px;
       font-size: 14px;
-      font-weight: 700;
+      font-weight: 800;
       text-decoration: none;
       color: #ffffff;
-      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
-    .btn-call {
-      background-color: var(--call);
+    .dock-call {
+      background: var(--call);
     }
-    .btn-whatsapp {
-      background-color: var(--whatsapp);
+    .dock-whatsapp {
+      background: var(--whatsapp);
+      color: #0b2e16;
     }
   </style>
 </head>
 <body>
 
-  <header class="header">
-    <div class="badge">Welding & Fabrication Specialist</div>
+  <header class="header-banner">
+    <div class="status-pill">
+      <span class="status-dot"></span> Accepting New Fabrication Projects
+    </div>
     <h1>The Weld Shop</h1>
-    <p class="subtext">Custom Fabrication, Gates, Fences & Machining in Garden Grove, CA</p>
-    
-    <div class="stats">
-      <div class="stat-item">⭐ 5.0 Rating</div>
-      <div class="stat-item">📍 13032 Benton St</div>
+    <p class="location-sub">Industrial Welding • Custom Metal Fabrication • Gates & Rails</p>
+    <div class="quick-meta">
+      <span class="meta-tag">⭐ 5.0 Rated (Garden Grove)</span>
+      <span class="meta-tag">📍 13032 Benton St</span>
     </div>
   </header>
 
-  <main class="container">
-    <div class="section-title">Custom Fabrication & Roll Cages</div>
-    <div class="grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?w=500&auto=format&fit=crop&q=80" alt="Tube Fabrication">
-        <div class="card-label">Tube & Chassis Fab</div>
+  <main class="main-wrap">
+    <div class="headline-bar">Heavy Fabrication & Tube Work</div>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80" alt="Roll Cage & Tube Work">
+        <div class="card-footer">
+          <h3>Tube & Roll Cages</h3>
+          <p>Custom structural bending & fitment</p>
+        </div>
       </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=500&auto=format&fit=crop&q=80" alt="Precision TIG Welding">
-        <div class="card-label">Precision TIG & MIG</div>
-      </div>
-    </div>
-
-    <div class="section-title">Gates, Fences & Handrails</div>
-    <div class="grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?w=500&auto=format&fit=crop&q=80" alt="Custom Gates">
-        <div class="card-label">Custom Gates</div>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=500&auto=format&fit=crop&q=80" alt="Handrails & Metal Work">
-        <div class="card-label">Handrails & Metal Work</div>
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Precision TIG & MIG">
+        <div class="card-footer">
+          <h3>TIG / MIG Welding</h3>
+          <p>Clean structural & alloy welds</p>
+        </div>
       </div>
     </div>
 
-    <div class="reviews-box">
-      <div class="review-stars">★★★★★</div>
-      <p class="review-quote">"Top quality custom welding and fabrication work in Garden Grove. Precise cuts, strong welds, and fast turnaround."</p>
-      <p class="review-author">— Verified Customer (Garden Grove, CA)</p>
+    <div class="headline-bar">Gates, Ironwork & Security</div>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?auto=format&fit=crop&w=600&q=80" alt="Custom Driveway Gates">
+        <div class="card-footer">
+          <h3>Gates & Railings</h3>
+          <p>Heavy iron entry & security gates</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=600&q=80" alt="Metal Repairs">
+        <div class="card-footer">
+          <h3>Machining & Repairs</h3>
+          <p>Custom cutting, brackets & fixes</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="spec-box">
+      <div class="spec-title">Direct Shop Capabilities</div>
+      <ul class="spec-list">
+        <li>Custom Tubing & Cages</li>
+        <li>Driveway & Entry Gates</li>
+        <li>TIG / MIG Steel & Alloy</li>
+        <li>Precision Cutting & Machining</li>
+        <li>Structural Iron Repairs</li>
+        <li>Fast Turnaround Quotes</li>
+      </ul>
     </div>
   </main>
 
-  <div class="fixed-bar">
-    <a href="tel:+15623654130" class="btn btn-call">
-      📞 Call (562) 365-4130
+  <div class="action-dock">
+    <a href="tel:+15623654130" class="dock-btn dock-call">
+      📞 Call Shop
     </a>
-    <a href="https://wa.me/15623654130?text=Hi,%20I'm%20interested%20in%20a%20quote%20for%20custom%20fabrication%20or%20gates.%20Here%20are%20the%20details:" class="btn btn-whatsapp">
+    <a href="https://wa.me/15623654130?text=Hi,%20I'm%20looking%20for%20a%20quote%20on%20a%20custom%20fabrication%20or%20gate%20job.%20Here%20are%20the%20details:" class="dock-btn dock-whatsapp">
       💬 WhatsApp Quote
     </a>
   </div>
