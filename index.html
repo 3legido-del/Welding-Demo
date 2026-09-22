@@ -3,174 +3,275 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>The Weld Shop | Custom Metal Fabrication | Garden Grove, CA</title>
+  <title>The Weld Shop | Welding & Custom Metal Fabrication</title>
   <style>
     :root {
-      --bg: #111317;
-      --surface: #1a1d24;
-      --border: #2b303c;
-      --text: #ffffff;
+      --primary-red: #c92a2a;
+      --dark-red: #991b1b;
+      --dark-bg: #111317;
+      --card-bg: #1a1d24;
+      --border-color: #2b303c;
+      --text-white: #ffffff;
       --text-dim: #9ca3af;
-      --accent: #f59e0b;
-      --whatsapp: #25d366;
-      --call: #2563eb;
+      --call-blue: #1d4ed8;
+      --whatsapp-green: #16a34a;
     }
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       -webkit-tap-highlight-color: transparent;
     }
     body {
-      background-color: var(--bg);
-      color: var(--text);
+      background-color: var(--dark-bg);
+      color: var(--text-white);
       padding-bottom: 95px;
     }
-    .header-banner {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      padding: 24px 16px 20px;
-      text-align: center;
-    }
-    .status-pill {
-      display: inline-flex;
+
+    /* Top Commercial Bar */
+    .top-bar {
+      background: #ffffff;
+      color: #111827;
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 6px;
-      background: rgba(37, 211, 102, 0.15);
-      border: 1px solid rgba(37, 211, 102, 0.4);
-      color: var(--whatsapp);
-      padding: 4px 12px;
-      border-radius: 20px;
+      border-bottom: 3px solid var(--primary-red);
+    }
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand-icon {
+      font-size: 26px;
+      line-height: 1;
+    }
+    .brand-title {
+      font-size: 17px;
+      font-weight: 900;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: -0.3px;
+    }
+    .brand-title span {
+      display: block;
       font-size: 11px;
       font-weight: 700;
+      color: var(--primary-red);
       letter-spacing: 0.5px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
     }
-    .status-dot {
-      width: 7px;
-      height: 7px;
-      background: var(--whatsapp);
-      border-radius: 50%;
-    }
-    h1 {
-      font-size: 26px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: -0.5px;
-      margin-bottom: 4px;
-    }
-    .location-sub {
-      color: var(--text-dim);
-      font-size: 13px;
-      margin-bottom: 12px;
-    }
-    .quick-meta {
+    .header-contacts {
       display: flex;
-      justify-content: center;
-      gap: 10px;
-      font-size: 12px;
+      gap: 16px;
+      text-align: right;
+    }
+    .header-contact-item {
+      font-size: 11px;
+      color: #4b5563;
       font-weight: 600;
-      color: #e5e7eb;
     }
-    .meta-tag {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      padding: 5px 12px;
-      border-radius: 6px;
+    .header-contact-item strong {
+      display: block;
+      font-size: 13px;
+      color: #111827;
+      font-weight: 800;
     }
-    .main-wrap {
-      max-width: 540px;
-      margin: 0 auto;
-      padding: 16px;
+
+    /* Red Accent Nav Strip */
+    .nav-strip {
+      background: var(--primary-red);
+      padding: 8px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #ffffff;
     }
-    .headline-bar {
-      font-size: 12px;
+    .nav-tags {
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .quote-badge {
+      background: #111827;
+      color: #ffffff;
+      padding: 3px 10px;
+      border-radius: 4px;
+      font-size: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    /* Full-Bleed High Impact Industrial Hero */
+    .hero {
+      position: relative;
+      min-height: 380px;
+      background: linear-gradient(rgba(10, 12, 16, 0.55), rgba(10, 12, 16, 0.85)),
+                  url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 32px 20px;
+    }
+    .hero-badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: rgba(201, 42, 42, 0.25);
+      border: 1px solid var(--primary-red);
+      color: #fca5a5;
+      font-size: 10px;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--accent);
-      margin: 20px 0 12px;
+      letter-spacing: 1.5px;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+    .hero h1 {
+      font-size: 34px;
+      font-weight: 900;
+      line-height: 1.1;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .hero-materials {
+      font-size: 14px;
+      font-weight: 600;
+      color: #e5e7eb;
+      margin-bottom: 20px;
+    }
+    .hero-materials span {
+      color: var(--primary-red);
+      font-weight: 800;
+      margin: 0 4px;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--primary-red);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 12px 22px;
+      border-radius: 6px;
+      width: fit-content;
+      box-shadow: 0 4px 14px rgba(201, 42, 42, 0.4);
+    }
+
+    /* Core Content Wrap */
+    .content-wrap {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 24px 16px;
+    }
+
+    .section-header {
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #ffffff;
+      margin: 24px 0 14px;
       display: flex;
       align-items: center;
-      gap: 8px;
-    }
-    .headline-bar::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
-    .project-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
       gap: 10px;
     }
-    .project-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
+    .section-header::after {
+      content: "";
+      flex: 1;
+      height: 2px;
+      background: var(--border-color);
+    }
+    .section-header span {
+      color: var(--primary-red);
+    }
+
+    /* Image Gallery Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .gallery-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
       border-radius: 8px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
     }
-    .project-card img {
+    .gallery-card img {
       width: 100%;
       height: 145px;
       object-fit: cover;
       display: block;
       background: #000;
     }
-    .card-footer {
-      padding: 10px;
-      flex: 1;
+    .gallery-details {
+      padding: 10px 12px;
+      border-top: 2px solid var(--primary-red);
     }
-    .card-footer h3 {
+    .gallery-details h3 {
       font-size: 13px;
-      font-weight: 700;
-      color: #f3f4f6;
+      font-weight: 800;
+      color: #ffffff;
       margin-bottom: 2px;
     }
-    .card-footer p {
+    .gallery-details p {
       font-size: 11px;
       color: var(--text-dim);
     }
-    .spec-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--accent);
+
+    /* Specification Features */
+    .specs-panel {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-left: 5px solid var(--primary-red);
       border-radius: 8px;
-      padding: 14px;
-      margin-top: 18px;
+      padding: 16px;
+      margin-top: 20px;
     }
-    .spec-title {
+    .specs-panel h4 {
       font-size: 13px;
-      font-weight: 800;
+      font-weight: 900;
       text-transform: uppercase;
-      color: #fff;
-      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
     }
-    .spec-list {
+    .specs-list {
       list-style: none;
-      font-size: 12px;
-      color: var(--text-dim);
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 8px;
+      font-size: 12px;
+      color: #cbd5e1;
+      font-weight: 600;
     }
-    .spec-list li::before {
-      content: "✓ ";
-      color: var(--accent);
-      font-weight: bold;
+    .specs-list li::before {
+      content: "■ ";
+      color: var(--primary-red);
+      font-size: 9px;
+      vertical-align: middle;
+      margin-right: 4px;
     }
+
+    /* Fixed Bottom Action Dock */
     .action-dock {
       position: fixed;
       bottom: 0;
       left: 0;
       right: 0;
-      background: var(--surface);
-      border-top: 1px solid var(--border);
+      background: #0f1115;
+      border-top: 1px solid var(--border-color);
       padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
       display: flex;
       gap: 10px;
@@ -182,7 +283,7 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 14px 10px;
+      padding: 15px 12px;
       border-radius: 8px;
       font-size: 14px;
       font-weight: 800;
@@ -191,85 +292,124 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
-    .dock-call {
-      background: var(--call);
+    .dock-btn-call {
+      background: var(--call-blue);
     }
-    .dock-whatsapp {
-      background: var(--whatsapp);
-      color: #052e16;
+    .dock-btn-quote {
+      background: var(--whatsapp-green);
     }
   </style>
 </head>
 <body>
 
-  <header class="header-banner">
-    <div class="status-pill">
-      <span class="status-dot"></span> Shop Active & Taking Projects
+  <!-- Top Reference Header Bar -->
+  <header class="top-bar">
+    <div class="brand-group">
+      <div class="brand-icon">⚙️</div>
+      <div class="brand-title">
+        The Weld Shop
+        <span>Welding & Fabrication</span>
+      </div>
     </div>
-    <h1>The Weld Shop</h1>
-    <p class="location-sub">Custom Tube Fabrication • Roll Cages • Gates & Fences</p>
-    <div class="quick-meta">
-      <span class="meta-tag">⭐ 5.0 Rating</span>
-      <span class="meta-tag">📍 Garden Grove, CA</span>
+    <div class="header-contacts">
+      <div class="header-contact-item">
+        Call Shop
+        <strong>(562) 365-4130</strong>
+      </div>
+      <div class="header-contact-item">
+        Location
+        <strong>Garden Grove, CA</strong>
+      </div>
     </div>
   </header>
 
-  <main class="main-wrap">
-    <div class="headline-bar">Shop Fabrication & Roll Cages</div>
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="https://images.pexels.com/photos/2381463/pexels-photo-2381463.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Tube Fabrication">
-        <div class="card-footer">
+  <!-- Red Navigation / Category Strip -->
+  <nav class="nav-strip">
+    <div class="nav-tags">
+      <span>Fabrication</span>
+      <span>•</span>
+      <span>Gates</span>
+      <span>•</span>
+      <span>Roll Cages</span>
+      <span>•</span>
+      <span>Repairs</span>
+    </div>
+    <span class="quote-badge">Direct Quotes</span>
+  </nav>
+
+  <!-- High-Impact Live Hero -->
+  <section class="hero">
+    <div class="hero-badge">Direct Metal Specialist</div>
+    <h1>We Can Help</h1>
+    <div class="hero-materials">
+      Steel <span>|</span> Wrought Iron <span>|</span> Aluminum <span>|</span> Stainless
+    </div>
+    <a href="tel:+15623654130" class="hero-cta">
+      Call (562) 365-4130 &nbsp;→
+    </a>
+  </section>
+
+  <!-- Gallery & Capabilities -->
+  <main class="content-wrap">
+
+    <div class="section-header"><span>01</span> Heavy Fab & Roll Cages</div>
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80" alt="Chassis & Tube Bending">
+        <div class="gallery-details">
           <h3>Tube & Roll Cages</h3>
-          <p>Custom chassis bends & fitment</p>
+          <p>Custom mandrel bends & chassis fabrication</p>
         </div>
       </div>
-      <div class="project-card">
-        <img src="https://images.pexels.com/photos/1474993/pexels-photo-1474993.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Precision TIG / MIG">
-        <div class="card-footer">
-          <h3>Precision TIG & MIG</h3>
-          <p>Structural beads & clean joints</p>
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Precision TIG Welding">
+        <div class="gallery-details">
+          <h3>TIG / MIG Welding</h3>
+          <p>Structural high-penetration bead welds</p>
         </div>
       </div>
     </div>
 
-    <div class="headline-bar">Gates, Handrails & Security</div>
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="https://images.pexels.com/photos/1758531/pexels-photo-1758531.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Driveway & Entry Gates">
-        <div class="card-footer">
+    <div class="section-header"><span>02</span> Gates & Structural Iron</div>
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=600&q=80" alt="Wrought Iron Driveway Gate">
+        <div class="gallery-details">
           <h3>Driveway & Entry Gates</h3>
-          <p>Heavy iron gates & automated installs</p>
+          <p>Heavy wrought iron security entrances</p>
         </div>
       </div>
-      <div class="project-card">
-        <img src="https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Handrails & Structural Iron">
-        <div class="card-footer">
-          <h3>Handrails & Ironwork</h3>
-          <p>Custom security rails & brackets</p>
+      <div class="gallery-card">
+        <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=600&q=80" alt="Handrails & Structural Metal">
+        <div class="gallery-details">
+          <h3>Handrails & Repairs</h3>
+          <p>Industrial stairs, brackets & plate fixes</p>
         </div>
       </div>
     </div>
 
-    <div class="spec-box">
-      <div class="spec-title">Direct Shop Capabilities</div>
-      <ul class="spec-list">
-        <li>Custom Tube Bending</li>
-        <li>Driveway & Security Gates</li>
-        <li>Chassis & Roll Cage Fab</li>
-        <li>Handrails & Metal Fences</li>
-        <li>TIG / MIG Precision Welding</li>
-        <li>Direct Shop Turnaround</li>
+    <!-- Capabilities Box -->
+    <section class="specs-panel">
+      <h4>Direct Shop Capabilities</h4>
+      <ul class="specs-list">
+        <li>Custom Roll Cages</li>
+        <li>Driveway Entry Gates</li>
+        <li>Tube Notching & Bending</li>
+        <li>Security Handrails</li>
+        <li>TIG / MIG Steel & Alloy</li>
+        <li>On-Site Fast Quotes</li>
       </ul>
-    </div>
+    </section>
+
   </main>
 
+  <!-- Sticky Bottom Contact Bar -->
   <div class="action-dock">
-    <a href="tel:+15623654130" class="dock-btn dock-call">
-      📞 Call (562) 365-4130
+    <a href="tel:+15623654130" class="dock-btn dock-btn-call">
+      📞 Call Now
     </a>
-    <a href="https://wa.me/15623654130?text=Hi,%20I'm%20looking%20for%20a%20quote%20on%20a%20custom%20fabrication%20job.%20Here%20are%20the%20details:" class="dock-btn dock-whatsapp">
-      💬 WhatsApp Quote
+    <a href="https://wa.me/15623654130?text=Hi,%20I'm%20looking%20for%20a%20quote%20on%20a%20welding%20or%20fabrication%20job.%20Here%20are%20the%20details:" class="dock-btn dock-btn-quote">
+      💬 Instant Quote
     </a>
   </div>
 
